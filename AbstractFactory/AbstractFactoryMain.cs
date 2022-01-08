@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Assignment2.AbstractFactory.Factories;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,6 +16,7 @@ namespace Assignment2.AbstractFactory
         
         public void Run()
         {
+            Console.WriteLine("");
             Console.WriteLine("Lets create an animal!");
             Console.WriteLine("Please type the name of the animal:");
             var animalName = Console.ReadLine();
@@ -24,16 +26,19 @@ namespace Assignment2.AbstractFactory
             Console.WriteLine("1. Dog");
             Console.WriteLine("2. Cat");
 
+            var factoryFactory = new FactoryFactory();
             var userInput = Console.ReadKey(intercept: true).Key;
             switch (userInput)
             {
                 case ConsoleKey.D1:
                 case ConsoleKey.NumPad1:
                     Console.WriteLine("Dog");
+                    factoryFactory.GetFactory("Dog");
                     break;
                 case ConsoleKey.D2:
                 case ConsoleKey.NumPad2:
                     Console.WriteLine("Cat");
+                    factoryFactory.GetFactory("Cat");
                     break;
                 default:
                     Console.WriteLine("Unknown command. Please try again.");
