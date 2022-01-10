@@ -11,24 +11,47 @@ namespace Assignment2
     {
         private static void Main(string[] args)
         {
-            Console.WriteLine("Abstract Factory");
-            AbstractFactoryMain abstractFactory = new();
-            abstractFactory.Run();
-            Console.WriteLine();
+            Console.WriteLine("**************************");
+            Console.WriteLine("Please choose a pattern");
+            Console.WriteLine("");
+            Console.WriteLine("1. Abstract Factory");
+            Console.WriteLine("2. Facade Pattern");
+            Console.WriteLine("3. Adapter Pattern");
+            Console.WriteLine("4. State Command Memento");
+            Console.WriteLine("");
+            Console.WriteLine("*************************");
 
-            Console.WriteLine("Facade");
-            FacadeMain facadeMain = new();
-            facadeMain.Run();
-            Console.WriteLine();
-
-            Console.WriteLine("Adapter");
-            AdapterMain adapterMain = new();
-            adapterMain.Run();
-            Console.WriteLine();
-
-            Console.WriteLine("State Command Memento");
-            SCMMain scmMain = new();
-            scmMain.Run();
+            var userInput = Console.ReadKey(intercept: true).Key;
+            switch (userInput)
+            {
+                case ConsoleKey.D1:
+                case ConsoleKey.NumPad1:
+                    Console.WriteLine("Abstract Factory");
+                    AbstractFactoryMain abstractFactory = new();
+                    abstractFactory.Run();
+                    break;
+                case ConsoleKey.D2:
+                case ConsoleKey.NumPad2:
+                    Console.WriteLine("Facade");
+                    FacadeMain facadeMain = new();
+                    facadeMain.Run();
+                    break;
+                case ConsoleKey.D3:
+                case ConsoleKey.NumPad3:
+                    Console.WriteLine("Adapter");
+                    AdapterMain adapterMain = new();
+                    adapterMain.Run();
+                    break;
+                case ConsoleKey.D4:
+                case ConsoleKey.NumPad4:
+                    Console.WriteLine("State Command Memento");
+                    SCMMain scmMain = new();
+                    scmMain.Run();
+                    break;
+                default:
+                    Console.WriteLine("Unknown command. Please try again.");
+                    break;
+            }
         }
     }
 }

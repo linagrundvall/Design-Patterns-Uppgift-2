@@ -1,19 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Assignment2.AbstractFactory.Factories
+﻿namespace Assignment2.AbstractFactory.Factories
 {
     internal class FactoryFactory
     {
         public FactoryFactory()
         {
-
         }
 
-        internal IFactory GetFactory(string typeOfFactory)
+        internal IFactory GetFactory(string typeOfFactory, string animalName)
         {
             if (typeOfFactory == "Dog")
             {

@@ -1,17 +1,12 @@
 ﻿using Assignment2.AbstractFactory.Animals;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Assignment2.AbstractFactory.Factories
 {
     internal class DogFactory : IFactory
     {
-        public IDog CreateAnimal()
+        public IDog CreateAnimal(string animalName)
         {
-            return new Dog();
+            return new Dog(animalName);
         }
     }
 }

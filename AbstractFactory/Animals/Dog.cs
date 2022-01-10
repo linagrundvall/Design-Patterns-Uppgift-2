@@ -1,18 +1,16 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Assignment2.AbstractFactory.Animals
 {
     internal class Dog : IDog, IAnimal
     {
-        //public Dog(string name)
-        //{
-        //    Name = name;
-        //}
+        public Guid ID { get; set; }
+        public string Name { get; set; }
 
-        //public string Name { get; set; }
+        public Dog(string name)
+        {
+            ID = Guid.NewGuid();
+            Name = name;
+        }
     }
 }

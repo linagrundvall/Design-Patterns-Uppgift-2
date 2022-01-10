@@ -1,19 +1,16 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Assignment2.AbstractFactory.Animals
 {
     internal class Cat : ICat, IAnimal
     {
-        //public Cat(string name)
-        //{
-        //    Name = name;
-        //}
-
-        //public string Name { get; set; }
-
+        public Guid ID { get; set; }
+        public string Name { get; set; }
+        
+        public Cat(string name)
+        {
+            ID = Guid.NewGuid();
+            Name = name;
+        }
     }
 }

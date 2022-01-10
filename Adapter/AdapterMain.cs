@@ -20,7 +20,7 @@ namespace Assignment2.Adapter
             // Det jag vill göra men inte kan är
             ReturningStrings returningStrings = new();
             PrintingInts printingInts = new();
-            printingInts.Print(returningStrings.ReturnString());            
+            //printingInts.Print(returningStrings.ReturnString());            
         }
     }
 }

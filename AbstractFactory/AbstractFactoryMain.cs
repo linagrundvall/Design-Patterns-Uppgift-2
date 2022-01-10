@@ -1,19 +1,10 @@
 ﻿using Assignment2.AbstractFactory.Factories;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Assignment2.AbstractFactory
 {
     internal class AbstractFactoryMain
     {
-        // Skapa två fabriker som kan köra CreateAnimal() den ena fabriken
-        // ska skapa en hund och den andra en katt skapa sedan en
-        // abstract factory där man
-        // får tillbaka en av de 2 fabrikerna beroende på ett sträng argument
-        
         public void Run()
         {
             Console.WriteLine("");
@@ -32,13 +23,13 @@ namespace Assignment2.AbstractFactory
             {
                 case ConsoleKey.D1:
                 case ConsoleKey.NumPad1:
-                    Console.WriteLine("Dog");
-                    factoryFactory.GetFactory("Dog");
+                    factoryFactory.GetFactory("Dog", animalName);
+                    Console.WriteLine("You created a new dog called " + animalName);
                     break;
                 case ConsoleKey.D2:
                 case ConsoleKey.NumPad2:
-                    Console.WriteLine("Cat");
-                    factoryFactory.GetFactory("Cat");
+                    factoryFactory.GetFactory("Cat", animalName);
+                    Console.WriteLine("You created a new cat called " + animalName);
                     break;
                 default:
                     Console.WriteLine("Unknown command. Please try again.");
