@@ -22,6 +22,7 @@ namespace Assignment2.StateCommandMemento
             Console.WriteLine("");
             Console.WriteLine("1. Turn the machine on/off");
             Console.WriteLine("2. Save stuff?");
+            Console.WriteLine("3. Reset");
             Console.WriteLine("");
 
             while(true)
@@ -35,6 +36,13 @@ namespace Assignment2.StateCommandMemento
                         break;
                     case ConsoleKey.D2:
                     case ConsoleKey.NumPad2:
+                        Console.WriteLine("Please write stuff to save");
+                        var stuff = Console.ReadLine();
+                        Console.WriteLine(stuff);
+                        break;
+                    case ConsoleKey.D3:
+                    case ConsoleKey.NumPad3:
+                        Console.WriteLine("Resetting");
                         break;
                     default:
                         Console.WriteLine("Unknown command. Please try again.");
