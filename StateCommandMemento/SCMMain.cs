@@ -1,4 +1,6 @@
-﻿namespace Assignment2.StateCommandMemento
+﻿using System;
+
+namespace Assignment2.StateCommandMemento
 {
     internal class SCMMain
     {
@@ -12,7 +14,33 @@
          */
         public void Run()
         {
+            Machine machine = new Machine();
+            Console.WriteLine("**************************");
+            Console.WriteLine("Welcome to the machine!");
+            Console.WriteLine("");
+            Console.WriteLine("Please interact");
+            Console.WriteLine("");
+            Console.WriteLine("1. Turn the machine on/off");
+            Console.WriteLine("2. Save stuff?");
+            Console.WriteLine("");
 
+            while(true)
+            { 
+                var userInput = Console.ReadKey(intercept: true).Key;
+                switch (userInput)
+                {
+                    case ConsoleKey.D1:
+                    case ConsoleKey.NumPad1:
+                        machine.PowerSwitch();
+                        break;
+                    case ConsoleKey.D2:
+                    case ConsoleKey.NumPad2:
+                        break;
+                    default:
+                        Console.WriteLine("Unknown command. Please try again.");
+                        break;
+                }
+            }
         }
     }
 }
