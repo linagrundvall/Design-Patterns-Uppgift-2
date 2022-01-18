@@ -6,10 +6,7 @@ using System.Threading.Tasks;
 
 namespace Assignment2.StateCommandMemento
 {
-    interface ICommand
+    internal class CommandMemento
     {
-        void Save();
-        void Do();
-        void Reset();
     }
 }

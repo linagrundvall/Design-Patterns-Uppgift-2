@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Assignment2.StateCommandMemento
 {
-    internal class Machine
+    internal class Machine : IMachine
     {
         public IMachineState MachineState { get; set; }
 
@@ -28,5 +28,10 @@ namespace Assignment2.StateCommandMemento
                 MachineState = new MachineStateOff();
             }
         }
+
+        //public MachineOperation(char machineOperation)
+        //{
+
+        //}
     }
 }

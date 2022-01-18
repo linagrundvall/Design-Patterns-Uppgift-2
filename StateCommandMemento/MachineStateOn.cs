@@ -11,6 +11,9 @@ namespace Assignment2.StateCommandMemento
         public void PowerSwitch()
         {
             Console.WriteLine("Turning Machine Off");
+            //create memento?
+            //List<CommandMemento> memories = new();
+
         }
     }
 }

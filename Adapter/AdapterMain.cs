@@ -10,17 +10,11 @@ namespace Assignment2.Adapter
     {
         public void Run()
         {
-            // Skriv en adapter för ReturningStrings som kan konsumeras av PrintingInts           
-
-            // ReturningStrings
-            // PrintingInts
+            
 
 
-            // OBS TRASIG KOD - TA BORT NÄR DU BÖRJAR KODA
-            // Det jag vill göra men inte kan är
-            ReturningStrings returningStrings = new();
-            PrintingInts printingInts = new();
-            //printingInts.Print(returningStrings.ReturnString());            
+            StringAdapter stringAdapter = new StringAdapter();
+            stringAdapter.Run();
         }
     }
 }
