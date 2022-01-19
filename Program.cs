@@ -18,6 +18,7 @@ namespace Assignment2
             Console.WriteLine("2. Facade Pattern");
             Console.WriteLine("3. Adapter Pattern");
             Console.WriteLine("4. State Command Memento");
+            Console.WriteLine("5. Exit the program");
             Console.WriteLine("");
             Console.WriteLine("*************************");
 
@@ -47,6 +48,10 @@ namespace Assignment2
                     Console.WriteLine("State Command Memento");
                     SCMMain scmMain = new();
                     scmMain.Run();
+                    break;
+                case ConsoleKey.D5:
+                case ConsoleKey.NumPad5:
+                    
                     break;
                 default:
                     Console.WriteLine("Unknown command. Please try again.");

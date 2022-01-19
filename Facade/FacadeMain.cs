@@ -10,6 +10,9 @@ namespace Assignment2.Facade
     {
        public void Run()
         {      
+
+
+
             // Write a facade to make it easier to save and load words
 
                 List<char> one = new();

@@ -10,11 +10,8 @@ namespace Assignment2.Adapter
     {
         public void Run()
         {
-            
-
-
-            StringAdapter stringAdapter = new StringAdapter();
-            stringAdapter.Run();
+            TypeConverter typeConverter = new TypeConverter();
+            typeConverter.Run();
         }
     }
 }
