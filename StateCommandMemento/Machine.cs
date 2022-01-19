@@ -22,16 +22,14 @@ namespace Assignment2.StateCommandMemento
             if (MachineState is MachineStateOff)
             {
                 MachineState = new MachineStateOn();
+                //och kör sparade commandon
             }
             else
             {
                 MachineState = new MachineStateOff();
+                //skapa memento??? 
             }
         }
 
-        //public MachineOperation(char machineOperation)
-        //{
-
-        //}
     }
 }

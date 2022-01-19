@@ -20,7 +20,6 @@ namespace Assignment2.StateCommandMemento
             Machine machine = new Machine();
             var machineManager = new MachineManager();
             
-
             Console.WriteLine("**************************");
             Console.WriteLine("Welcome to the machine!");
             Console.WriteLine("");
@@ -51,6 +50,7 @@ namespace Assignment2.StateCommandMemento
                     case ConsoleKey.D3:
                     case ConsoleKey.NumPad3:
                         Console.WriteLine("Resetting");
+                        //memento.Reset
                         break;
                     case ConsoleKey.D4:
                     case ConsoleKey.NumPad4:

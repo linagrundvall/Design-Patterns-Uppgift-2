@@ -1,48 +1,48 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Assignment2.Facade
 {
     class FacadeMain
     {
-       public void Run()
-        {      
+        public WordFacade WordFacade { get; set; }
 
+        public FacadeMain()
+        {
+            WordFacade = new WordFacade();
+        }
 
-
-            // Write a facade to make it easier to save and load words
-
-                List<char> one = new();
-                List<char> two = new();
-                List<char> three = new();
-                List<char> four = new();
-                List<char> five = new();
-
-            // Save Word
+        public void Run()
+        {
+            Console.WriteLine("");
+            Console.WriteLine("Please enter one word with exactly 5 characters");
             string input = Console.ReadLine();
-            if (input.Length!=5)
-            {
-                Console.WriteLine("Exiting program - Error - The string needs to be EXACTLY 5 characters long");
-                Console.ReadKey(true);                
-            }
-            else
-            {
-                one.Add(input[0]);
-                two.Add(input[1]);
-                three.Add(input[2]);
-                four.Add(input[3]);
-                five.Add(input[4]);
-            }
 
-            // Load Word
-            if (one.Count>0)
+            WordFacade.Save(input);
+            Console.WriteLine("What do you want to do now?");
+            Console.WriteLine("");
+            Console.WriteLine("1. Save more words");
+            Console.WriteLine("2. Load the last word");
+            Console.WriteLine("3. Exit the program");
+
+            var userInput = Console.ReadKey(intercept: true).Key;
+            switch (userInput)
             {
-                char[] word = { one.Last(), two.Last(), three.Last(), four.Last(), five.Last() };
-                Console.WriteLine(word);
-            }            
+                case ConsoleKey.D1:
+                case ConsoleKey.NumPad1:
+                    Run();
+                    break;
+                case ConsoleKey.D2:
+                case ConsoleKey.NumPad2:
+                    WordFacade.Load();
+                    break;
+                case ConsoleKey.D3:
+                case ConsoleKey.NumPad3:
+                    Environment.Exit(0);
+                    break;
+                default:
+                    Console.WriteLine("Unknown command. Please try again.");
+                    break;
+            }
         }
     }
 }
