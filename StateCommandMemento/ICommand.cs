@@ -9,7 +9,7 @@ namespace Assignment2.StateCommandMemento
     interface ICommand
     {
         void Save();
-        void Do();
+        void Print();
         void Reset();
     }
 }

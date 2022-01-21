@@ -12,7 +12,7 @@ namespace Assignment2.StateCommandMemento
 
         public Machine()
         {
-            MachineState = new MachineStateOff();
+            MachineState = new MachineStateOn();
         }
 
         public void PowerSwitch()
@@ -22,13 +22,18 @@ namespace Assignment2.StateCommandMemento
             if (MachineState is MachineStateOff)
             {
                 MachineState = new MachineStateOn();
-                //och kör sparade commandon
+                //och kör sparade commandon, cw commandlist?
             }
             else
             {
                 MachineState = new MachineStateOff();
                 //skapa memento??? 
             }
+        }
+
+        public void Print(string stuff)
+        {
+            MachineState.Print(stuff);
         }
 
     }

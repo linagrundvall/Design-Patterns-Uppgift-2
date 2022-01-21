@@ -10,7 +10,13 @@ namespace Assignment2.StateCommandMemento
     {
         public void PowerSwitch()
         {
+            
             Console.WriteLine("Turning Machine On");
+        }
+
+        public void Print(string stuff)
+        {
+            Console.WriteLine("The machine if offline. Turn on to print.");
         }
     }
 }

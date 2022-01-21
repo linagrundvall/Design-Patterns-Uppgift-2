@@ -15,5 +15,10 @@ namespace Assignment2.StateCommandMemento
             //List<CommandMemento> memories = new();
 
         }
+
+        public void Print(string stuff)
+        {
+            Console.WriteLine(stuff);
+        }
     }
 }

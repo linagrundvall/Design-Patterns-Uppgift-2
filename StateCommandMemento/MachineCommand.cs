@@ -25,7 +25,7 @@ namespace Assignment2.StateCommandMemento
             Console.WriteLine("Save done");
         }
 
-        public void Do()
+        public void Print()
         {
             //if (MachineState.PowerSwitch == MachineStateOn)
             //{
