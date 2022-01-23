@@ -8,21 +8,21 @@ namespace Assignment2.StateCommandMemento
 {
     internal class MachineMemento
     {
-        public Machine Machine { get; set; }
-        public IMachineState MachineState { get; set; }
-        public string Stuff { get; set; }
+        //public Machine Machine { get; set; }
+        //public IMachineState MachineState { get; set; }
+        //public string Stuff { get; set; }
 
-        public MachineMemento(Machine machine, IMachineState machineState, string stuff)
-        {
-            Machine = machine;
-            MachineState = machineState;
-            Stuff = stuff;
-        }
+        //public MachineMemento(Machine machine, IMachineState machineState, string stuff)
+        //{
+        //    Machine = machine;
+        //    MachineState = machineState;
+        //    Stuff = stuff;
+        //}
 
-        public void Restore()
-        {
-            Machine.MachineState = MachineState;
-            Machine.Stuff = Stuff;
-        }
+        //public void Reset()
+        //{
+        //    Machine.MachineState = MachineState;
+        //    Machine.Stuff = Stuff;
+        //}
     }
 }

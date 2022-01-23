@@ -38,12 +38,10 @@ namespace Assignment2.StateCommandMemento
             MachineManager.AddCommand(stuff, this, MachineState);
             MachineManager.Do(MachineState);
         }
-        
-    
 
         //public MachineMemento CreateMemento()
         //{
-        //    return new MachineMemento(this, MachineState, Stuff);
+        //    return new (this, MachineState, Stuff);
         //}
     }
 }

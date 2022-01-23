@@ -11,9 +11,13 @@ namespace Assignment2.StateCommandMemento
         private Machine Machine { get; set; }
         private List<ICommand> CommandList { get; set; }
         public IMachineState MachineState { get; set; }
+        //private List<MachineMemento> Mementos { get; set; }
+
+
         public MachineManager()
         {
             CommandList = new();
+            //Mementos = new();
         }
 
         public void AddCommand(String stuff, IMachine machine, IMachineState machineState)
@@ -32,11 +36,21 @@ namespace Assignment2.StateCommandMemento
             }
         }
 
+        public List<ICommand> CreateMemento()
+        {
+            List<ICommand> MementoList;
+            MementoList = new();
+            foreach (var command in CommandList)
+            {
+                MementoList.Add(command);
+            }
+            return MementoList;
+        }
+
         public void Reset()
         {
-            Console.WriteLine("Reset");
             CommandList.Clear();
-            //Machine.MachineState = MachineStateOff;
+            Console.WriteLine("Reset");
         }
     }
 }

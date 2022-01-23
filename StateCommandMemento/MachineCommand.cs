@@ -28,7 +28,8 @@ namespace Assignment2.StateCommandMemento
 
         //public void Reset()
         //{
-        //    Console.WriteLine("Reset done");
+        //    Machine.MachineState = MachineState;
+        //    Machine.Stuff = Stuff;
         //}
     }
 }
