@@ -10,10 +10,26 @@ namespace Assignment2.StateCommandMemento
     {
         private Machine Machine { get; set; }
         private List<ICommand> CommandList { get; set; }
+        public IMachineState MachineState { get; set; }
         public MachineManager()
         {
-            Machine = new();
             CommandList = new();
+        }
+
+        public void AddCommand(String stuff, IMachine machine, IMachineState machineState)
+        {
+            ICommand command = new MachineCommand(stuff, machine, machineState);
+            CommandList.Add(command);
+            MachineState = machineState;
+        }
+
+        public void Do(IMachineState machineState)
+        {
+
+            foreach (var command in CommandList)
+            {
+                command.MachineState.Print(command.Stuff, machineState);
+            }
         }
 
         public void Reset()

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Assignment2.StateCommandMemento
 {
@@ -20,7 +21,8 @@ namespace Assignment2.StateCommandMemento
         public void Run()
         {
             Machine machine = new Machine();
-            var machineManager = new MachineManager();
+
+            List<MachineMemento> memories = new();
             
             Console.WriteLine("**************************");
             Console.WriteLine("Welcome to the machine!");
@@ -46,12 +48,13 @@ namespace Assignment2.StateCommandMemento
                     case ConsoleKey.NumPad2:
                         Console.WriteLine("Please write stuff to print");
                         var stuff = Console.ReadLine();
-                        machine.Print(stuff);
+                        machine.Execute(stuff);
                         break;
                     case ConsoleKey.D3:
                     case ConsoleKey.NumPad3:
                         Console.WriteLine("Resetting");
-                        //memento.Reset
+                        memories.LastOrDefault().Restore();
+
                         break;
                     case ConsoleKey.D4:
                     case ConsoleKey.NumPad4:

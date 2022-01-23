@@ -11,14 +11,14 @@ namespace Assignment2.StateCommandMemento
         public void PowerSwitch()
         {
             Console.WriteLine("Turning Machine Off");
-            //create memento?
-            //List<CommandMemento> memories = new();
 
+            //List<MachineMemento> memories = new();
+            //memories.Add(Machine.CreateMemento());
         }
 
-        public void Print(string stuff)
+        public void Print(string stuff, IMachineState machineState)
         {
-            Console.WriteLine(stuff);
+                Console.WriteLine(stuff);
         }
     }
 }

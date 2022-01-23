@@ -13,33 +13,22 @@ namespace Assignment2.StateCommandMemento
         public IMachineState MachineState { get; set; }
 
 
-        public MachineCommand(IMachine machine, string stuff, IMachineState machineState)
+        public MachineCommand(string stuff, IMachine machine, IMachineState machineState)
         {
-            Machine = machine;
+            
             Stuff = stuff;
+            Machine = machine;
             MachineState = machineState;
         }
 
-        public void Save()
+        public IMachineState GetMachineState()
         {
-            Console.WriteLine("Save done");
+            return MachineState;
         }
 
-        public void Print()
-        {
-            //if (MachineState.PowerSwitch == MachineStateOn)
-            //{
-            //    //skriva ut sista i commandlist
-            //}
-            //else
-            //{
-            //    //memento
-            //}
-        }
-
-        public void Reset()
-        {
-            Console.WriteLine("Reset done");
-        }
+        //public void Reset()
+        //{
+        //    Console.WriteLine("Reset done");
+        //}
     }
 }

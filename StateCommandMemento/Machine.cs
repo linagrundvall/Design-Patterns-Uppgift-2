@@ -9,10 +9,13 @@ namespace Assignment2.StateCommandMemento
     internal class Machine : IMachine
     {
         public IMachineState MachineState { get; set; }
+        public string Stuff { get; set; }
+        public MachineManager MachineManager { get; set; }
 
         public Machine()
         {
-            MachineState = new MachineStateOn();
+            MachineState = new MachineStateOff();
+            MachineManager = new MachineManager();
         }
 
         public void PowerSwitch()
@@ -22,19 +25,25 @@ namespace Assignment2.StateCommandMemento
             if (MachineState is MachineStateOff)
             {
                 MachineState = new MachineStateOn();
-                //och kör sparade commandon, cw commandlist?
+                MachineManager.Do(MachineState);
             }
             else
             {
                 MachineState = new MachineStateOff();
-                //skapa memento??? 
             }
         }
 
-        public void Print(string stuff)
+        public void Execute(string stuff)
         {
-            MachineState.Print(stuff);
+            MachineManager.AddCommand(stuff, this, MachineState);
+            MachineManager.Do(MachineState);
         }
+        
+    
 
+        //public MachineMemento CreateMemento()
+        //{
+        //    return new MachineMemento(this, MachineState, Stuff);
+        //}
     }
 }

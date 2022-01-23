@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Assignment2.StateCommandMemento
 {
-    interface IMachine
+    public interface IMachine
     {
     }
 }

@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Assignment2.StateCommandMemento
 {
-    interface IMachineState
+    public interface IMachineState
     {
         public void PowerSwitch();
-        public void Print(string stuff);
+        public void Print(string stuff, IMachineState machineState);
     }
 }
