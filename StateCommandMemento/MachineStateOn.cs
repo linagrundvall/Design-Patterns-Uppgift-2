@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Assignment2.StateCommandMemento
 {
@@ -11,9 +7,6 @@ namespace Assignment2.StateCommandMemento
         public void PowerSwitch()
         {
             Console.WriteLine("Turning Machine Off");
-
-            //List<MachineMemento> memories = new();
-            //memories.Add(Machine.CreateMemento());
         }
 
         public void Print(string stuff, IMachineState machineState)

@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Assignment2.StateCommandMemento
 {
@@ -11,13 +8,10 @@ namespace Assignment2.StateCommandMemento
         private Machine Machine { get; set; }
         private List<ICommand> CommandList { get; set; }
         public IMachineState MachineState { get; set; }
-        //private List<MachineMemento> Mementos { get; set; }
-
 
         public MachineManager()
         {
             CommandList = new();
-            //Mementos = new();
         }
 
         public void AddCommand(String stuff, IMachine machine, IMachineState machineState)

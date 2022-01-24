@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Assignment2.StateCommandMemento
+﻿namespace Assignment2.StateCommandMemento
 {
     internal class Machine : IMachine
     {
@@ -38,10 +32,5 @@ namespace Assignment2.StateCommandMemento
             MachineManager.AddCommand(stuff, this, MachineState);
             MachineManager.Do(MachineState);
         }
-
-        //public MachineMemento CreateMemento()
-        //{
-        //    return new (this, MachineState, Stuff);
-        //}
     }
 }

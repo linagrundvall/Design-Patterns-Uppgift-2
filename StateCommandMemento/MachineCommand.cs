@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Assignment2.StateCommandMemento
+﻿namespace Assignment2.StateCommandMemento
 {
     class MachineCommand : ICommand
     {
@@ -25,11 +19,5 @@ namespace Assignment2.StateCommandMemento
         {
             return MachineState;
         }
-
-        //public void Reset()
-        //{
-        //    Machine.MachineState = MachineState;
-        //    Machine.Stuff = Stuff;
-        //}
     }
 }

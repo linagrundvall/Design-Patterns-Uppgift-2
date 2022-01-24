@@ -2,10 +2,6 @@
 {
     internal class FactoryFactory
     {
-        public FactoryFactory()
-        {
-        }
-
         internal IFactory GetFactory(string typeOfFactory, string animalName)
         {
             if (typeOfFactory == "Dog")
